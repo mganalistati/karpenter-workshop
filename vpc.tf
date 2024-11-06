@@ -7,5 +7,4 @@ resource "aws_vpc" "eks_vpc" {
     Name       = "eks-vpc"
     created-by = "terraform"
   }
-
 }
