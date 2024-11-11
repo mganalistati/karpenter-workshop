@@ -1,20 +1,9 @@
-# Define Project Region In Root Module
-variable "region" {
-  type        = string
-  description = "# Define a region"
-}
-
-# Define Project CIDR In Network Son Module
-variable "cidr_block" {
-  type        = string
-  description = "# Define a CIDR block"
-}
-
-# Define Common Tags To Any Project
 variable "project_name" {
   type        = string
   description = "# Define a project name"
 }
+
+# common tags
 variable "organization" {
   type        = string
   description = "# Define a organization"

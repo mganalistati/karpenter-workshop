@@ -5,7 +5,7 @@ resource "aws_subnet" "eks_public_sn_1a" {
   availability_zone       = "${data.aws_region.current.name}a"
   map_public_ip_on_launch = true
 
-  tags = merge({ Name = "${var.project_name}-subnet-public1-${data.aws_region.current.name}a" }, local.common_tags)
+  tags = merge({ Name = "${var.project_name}-subnet-public1-${data.aws_region.current.name}a" }, var.common_tags)
 }
 
 # Public Subnetes "eks_public_sn_2b" In "eks_vpc"
@@ -15,14 +15,14 @@ resource "aws_subnet" "eks_public_sn_2b" {
   availability_zone       = "${data.aws_region.current.name}b"
   map_public_ip_on_launch = true
 
-  tags = merge({ Name = "${var.project_name}-subnet-public2-${data.aws_region.current.name}b" }, local.common_tags)
+  tags = merge({ Name = "${var.project_name}-subnet-public2-${data.aws_region.current.name}b" }, var.common_tags)
 }
 
 # Public Route Table "eks_public_rt" In "eks_vpc" 
 resource "aws_route_table" "eks_public_rt" {
   vpc_id = aws_vpc.eks_vpc.id
 
-  tags = merge({ Name = "${var.project_name}-rtb-public" }, local.common_tags)
+  tags = merge({ Name = "${var.project_name}-rtb-public" }, var.common_tags)
 }
 
 # Public Route "eks_public_r" In "eks_public_rt" To "eks_igw"
