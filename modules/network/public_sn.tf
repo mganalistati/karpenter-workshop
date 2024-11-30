@@ -10,7 +10,8 @@ resource "aws_subnet" "eks_public_sn_1a" {
   tags = merge(
     var.common_tags,
     {
-      Name = "${var.project_name}-sbn-pub1-${data.aws_region.current.name}a"
+      Name                     = "${var.project_name}-sbn-pub1-${data.aws_region.current.name}a",
+      "kubernetes.io/role/elb" = 1
     }
   )
 }
@@ -25,7 +26,8 @@ resource "aws_subnet" "eks_public_sn_2b" {
   tags = merge(
     var.common_tags,
     {
-      Name = "${var.project_name}-sbn-pub2-${data.aws_region.current.name}b"
+      Name                     = "${var.project_name}-sbn-pub2-${data.aws_region.current.name}b",
+      "kubernetes.io/role/elb" = 1
     }
   )
 }
@@ -40,7 +42,8 @@ resource "aws_subnet" "eks_public_sn_3c" {
   tags = merge(
     var.common_tags,
     {
-      Name = "${var.project_name}-sbn-pub3-${data.aws_region.current.name}c"
+      Name                     = "${var.project_name}-sbn-pub3-${data.aws_region.current.name}c",
+      "kubernetes.io/role/elb" = 1
     }
   )
 }
