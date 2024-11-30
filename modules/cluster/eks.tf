@@ -1,5 +1,5 @@
 resource "aws_eks_cluster" "eks_cluster" {
-  name     = "${var.project_name}-cluster"
+  name     = "${var.project_name}-eks-cluster"
   role_arn = aws_iam_role.eks_cluster_role.arn
   version  = 1.31
 
@@ -10,7 +10,8 @@ resource "aws_eks_cluster" "eks_cluster" {
 
     subnet_ids = [
       var.ctp_private_sn_1a,
-      var.ctp_private_sn_2b
+      var.ctp_private_sn_2b,
+      var.ctp_private_sn_3c
     ]
   }
 

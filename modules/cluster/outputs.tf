@@ -7,3 +7,8 @@ output "endpoint" {
   description = "The endpoint for your Kubernetes API server."
   value       = aws_eks_cluster.eks_cluster.endpoint
 }
+
+output "cluster_name" {
+  description = "The name of the cluster"
+  value       = aws_eks_cluster.eks_cluster.id
+}
