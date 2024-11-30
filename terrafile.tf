@@ -34,7 +34,15 @@ module "eks_node_group" {
   pod_private_sn_3c = module.eks_network.pod_private_sn_3c
 
   capacity_type = "SPOT"
-  instance_type = ["m5.large"]
+  instance_type = ["t3.large"]
 
   common_tags = local.common_tags
+}
+
+module "eks_load_balancer_controller" {
+  source = "./modules/load_balancer_controller"
+
+  project_name = var.project_name
+  common_tags  = local.common_tags
+  oidc_url     = module.eks_cluster.oidc_url
 }
