@@ -49,3 +49,8 @@ output "dtb_private_sn_2b" {
 output "dtb_private_sn_3c" {
   value = aws_subnet.eks_dtb_private_sn_3c.id
 }
+
+output "vpc_id" {
+  description = "The ID of the VPC"
+  value       = aws_vpc.eks_vpc.id
+}

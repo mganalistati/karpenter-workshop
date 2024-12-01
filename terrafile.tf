@@ -45,4 +45,6 @@ module "eks_load_balancer_controller" {
   project_name = var.project_name
   common_tags  = local.common_tags
   oidc_url     = module.eks_cluster.oidc_url
+  cluster_name = module.eks_cluster.cluster_name
+  vpc_id       = module.eks_network.vpc_id
 }

@@ -15,7 +15,7 @@ resource "aws_iam_role" "eks_load_balancer_controller_role" {
             "Condition": {
                 "StringEquals": {
                     "oidc.eks.${data.aws_region.current.name}.amazonaws.com/id/${local.oidc_id}:aud": "sts.amazonaws.com",
-                    "oidc.eks.${data.aws_region.current.name}.amazonaws.com/id/${local.oidc_id}:sub": "system:serviceaccount:kube-system:aws-load-balancer-controller"
+                    "oidc.eks.${data.aws_region.current.name}.amazonaws.com/id/${local.oidc_id}:sub": "system:serviceaccount:kube-system:${var.service_account_name}"
                 }
             }
         }
