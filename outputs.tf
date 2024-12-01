@@ -45,14 +45,3 @@
 # output "dtb_private_sn_3c" {
 #   value = module.eks_network.dtb_private_sn_3c
 # }
-
-# #### EKS CLUSTER ####
-output "eks_version" {
-  description = "The Kubernetes server version for the cluster."
-  value       = module.eks_cluster.eks_version
-}
-
-output "endpoint" {
-  description = "The endpoint for your Kubernetes API server."
-  value       = module.eks_cluster.endpoint
-}

@@ -3,11 +3,6 @@ output "eks_version" {
   value       = aws_eks_cluster.eks_cluster.version
 }
 
-output "endpoint" {
-  description = "The endpoint for your Kubernetes API server."
-  value       = aws_eks_cluster.eks_cluster.endpoint
-}
-
 output "cluster_name" {
   description = "The name of the cluster"
   value       = aws_eks_cluster.eks_cluster.id
@@ -16,3 +11,13 @@ output "cluster_name" {
 output "oidc_url" {
   value = aws_eks_cluster.eks_cluster.identity[0].oidc[0].issuer
 }
+
+output "cluster_endpoint" {
+  description = "Endpoint for your Kubernetes API server."
+  value       = aws_eks_cluster.eks_cluster.endpoint
+}
+
+output "cluster_ca_cert" {
+  description = "Attribute block containing certificate-authority-data for your cluster."
+  value       = aws_eks_cluster.eks_cluster.certificate_authority[0].data
+} 
