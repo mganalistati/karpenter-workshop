@@ -106,12 +106,9 @@ No resources.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | # Define a CIDR block | `string` | n/a | yes |
-| <a name="input_created-by"></a> [created-by](#input\_created-by) | # Define a created | `string` | n/a | yes |
-| <a name="input_department"></a> [department](#input\_department) | # Define a department | `string` | n/a | yes |
-| <a name="input_environment"></a> [environment](#input\_environment) | # Define a environment | `string` | n/a | yes |
-| <a name="input_organization"></a> [organization](#input\_organization) | # Define a organization | `string` | n/a | yes |
+| <a name="input_organization"></a> [region](#input\_region) | # Define a region | `string` | n/a | yes |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | # Define a project name | `string` | n/a | yes |
-| <a name="input_region"></a> [region](#input\_region) | # Define a region | `string` | n/a | yes |
+| <a name="input_region"></a> [tags](#input\_tags) | # Define a list of tags | `string` | n/a | yes |
 
 ## Outputs
 
