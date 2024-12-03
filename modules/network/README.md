@@ -1,8 +1,6 @@
 ## Load Balancer Controller Module
 Module for EKS network configuration
 
----
-
 ## Requirements
 
 No requirements.

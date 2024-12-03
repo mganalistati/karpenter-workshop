@@ -1,8 +1,6 @@
 ## Managed Node Group Module
 Module for creating and managing Node Groups
 
----
-
 ## Requirements
 
 No requirements.

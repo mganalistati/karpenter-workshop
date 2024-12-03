@@ -1,8 +1,6 @@
 ## Load Balancer Controller Module
 Module for configuring the Load Balancer Controller 
 
----
-
 ## Requirements
 
 No requirements.

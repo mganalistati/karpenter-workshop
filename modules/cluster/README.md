@@ -1,8 +1,6 @@
 ## Cluster Module
 Module for EKS cluster provisioning
 
----
-
 ## Requirements
 
 No requirements.
