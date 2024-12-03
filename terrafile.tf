@@ -22,13 +22,6 @@ module "eks_node_group" {
   cluster_name = module.eks_cluster.cluster_name
   project_name = var.project_name
 
-  # validar como fazer - Error: Unsupported attribute
-  # subnet_ids = [
-  #   module.eks_network.pod_private_sn_1a,
-  #   module.eks_network.pod_private_sn_2b,
-  #   module.eks_network.pod_private_sn_3c
-  # ]
-
   pod_private_sn_1a = module.eks_network.pod_private_sn_1a
   pod_private_sn_2b = module.eks_network.pod_private_sn_2b
   pod_private_sn_3c = module.eks_network.pod_private_sn_3c
