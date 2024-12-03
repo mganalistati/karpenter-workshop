@@ -15,22 +15,8 @@ variable "project_name" {
   description = "# Define a project name"
   type        = string
 }
-variable "organization" {
-  description = "# Define a organization"
-  type        = string
-}
 
-variable "department" {
-  description = "# Define a department"
-  type        = string
-}
-
-variable "environment" {
-  description = "# Define a environment"
-  type        = string
-}
-
-variable "created-by" {
-  description = "# Define a created"
-  type        = string
+variable "tags" {
+  description = "# Define a list of tags"
+  type        = map(any)
 }

@@ -51,5 +51,5 @@ variable "instance_type" {
   type        = list(string)
   description = "# Define a capacity type list"
 
-  default = ["t3.medium"]
+  default = ["m5.large"]
 }

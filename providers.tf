@@ -17,11 +17,6 @@ terraform {
       version = "2.16.1"
     }
   }
-  backend "s3" {
-    bucket = "karpenter-workshop"
-    key    = "dev/terraform.tfstate"
-    region = "us-east-1"
-  }
 }
 
 # aws provider config

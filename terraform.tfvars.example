@@ -1,0 +1,12 @@
+# general variables
+
+# project_name = "my-project"
+# region     = "us-east-1"
+# cidr_block = "10.1.0.0/16"
+
+# Variables example for tags
+
+# organization = "organization-name"
+# department = "departament-name"
+# environment = "environment-name"
+# created-by = "created-by-name"
