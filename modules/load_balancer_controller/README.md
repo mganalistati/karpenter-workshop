@@ -44,4 +44,6 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_cluster_account"></a> [cluster\_account](#output\_cluster\_account) | AWS Account of the cluster. |

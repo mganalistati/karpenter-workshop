@@ -1,12 +1,12 @@
 # Define Project Region In Root Module
 variable "region" {
-  description = "# Define a region"
+  description = "# Define a region of the cluster"
   type        = string
 }
 
 # Define Project CIDR In Network Son Module
 variable "cidr_block" {
-  description = "# Define a CIDR block"
+  description = "# Define a CIDR block of the VPC"
   type        = string
 }
 
@@ -17,6 +17,11 @@ variable "project_name" {
 }
 
 variable "tags" {
-  description = "# Define a list of tags"
+  description = "# Define a list of tags for the resources"
   type        = map(any)
+}
+
+variable "eks_version" {
+  description = "# Define a version of the eks cluster"
+  type        = string
 }

@@ -18,3 +18,8 @@ variable "ctp_private_sn_3c" {
   type        = string
   description = "# Define a ctp_private_sn_3c"
 }
+
+variable "eks_version" {
+  description = "# Define a version of the eks cluster"
+  type        = string
+}

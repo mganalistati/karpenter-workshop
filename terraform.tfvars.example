@@ -1,12 +1,26 @@
-# general variables
+# Inputs
 
-# project_name = "my-project"
-# region     = "us-east-1"
+# Define a CIDR block
+#
 # cidr_block = "10.1.0.0/16"
 
-# Variables example for tags
+# Define a region
+#
+# region = "us-east-1"
 
-# organization = "organization-name"
-# department = "departament-name"
-# environment = "environment-name"
-# created-by = "created-by-name"
+# Define a project name
+#
+# project_name = "my-project"
+
+# Define a version of the eks cluster
+#
+# eks_version = "1.31"
+
+# Define a list of tags
+#
+# tags = {
+#   organization = "organization-name",
+#   department   = "departament-name",
+#   environment  = "environment-name",
+#   created-by   = "created-by-name"
+# }

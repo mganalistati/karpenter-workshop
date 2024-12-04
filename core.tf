@@ -11,6 +11,7 @@ module "eks_cluster" {
   source = "./modules/cluster"
 
   project_name      = var.project_name
+  eks_version       = var.eks_version
   ctp_private_sn_1a = module.eks_network.ctp_private_sn_1a
   ctp_private_sn_2b = module.eks_network.ctp_private_sn_2b
   ctp_private_sn_3c = module.eks_network.ctp_private_sn_3c

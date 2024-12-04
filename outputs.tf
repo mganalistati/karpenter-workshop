@@ -1,47 +1,23 @@
-#### PUBLIC SUBNET ####
-# output "public_sn_1a" {
-#   value = module.eks_network.public_sn_1a
-# }
+output "eks_cluster_name" {
+  description = "Name of the cluster."
+  value       = module.eks_cluster.cluster_name
+}
 
-# output "public_sn_2b" {
-#   value = module.eks_network.public_sn_2b
-# }
+output "eks_cluster_version" {
+  description = "# Define a version of the EKS cluster."
+  value       = var.eks_version
+}
+output "aws_cluster_account" {
+  description = "AWS Account of the cluster."
+  value       = module.eks_load_balancer_controller.cluster_account
+}
 
-# output "public_sn_3c" {
-#   value = module.eks_network.public_sn_3c
-# }
+output "aws_cluster_region" {
+  description = "AWS Region of the cluster."
+  value       = var.region
+}
 
-#### POD PRIVATE SUBNET ####
-# output "pod_private_sn_1a" {
-#   value = module.eks_network.pod_private_sn_1a
-# }
-
-# output "pod_private_sn_2b" {
-#   value = module.eks_network.pod_private_sn_2b
-# }
-
-# output "pod_private_sn_3c" {
-#   value = module.eks_network.pod_private_sn_3c
-# }
-
-#### CTP PRIVATE SUBNET ####
-# output "ctp_private_sn_1a" {
-#   value = module.eks_network.ctp_private_sn_1a
-# }
-
-# output "ctp_private_sn_2b" {
-#   value = module.eks_network.ctp_private_sn_2b
-# }
-
-# #### DTB PRIVATE SUBNET ####
-# output "dtb_private_sn_1a" {
-#   value = module.eks_network.dtb_private_sn_1a
-# }
-
-# output "dtb_private_sn_2b" {
-#   value = module.eks_network.dtb_private_sn_2b
-# }
-
-# output "dtb_private_sn_3c" {
-#   value = module.eks_network.dtb_private_sn_3c
-# }
+output "eks_cluster_endpoint" {
+  description = "Endpoint for your Kubernetes API server."
+  value       = module.eks_cluster.cluster_endpoint
+}

@@ -105,11 +105,18 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | # Define a CIDR block | `string` | n/a | yes |
-| <a name="input_organization"></a> [region](#input\_region) | # Define a region | `string` | n/a | yes |
+| <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | # Define a CIDR block of the VPC | `string` | n/a | yes |
+| <a name="input_eks_version"></a> [eks\_version](#input\_eks\_version) | # Define a version of the eks cluster | `string` | n/a | yes |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | # Define a project name | `string` | n/a | yes |
-| <a name="input_region"></a> [tags](#input\_tags) | # Define a list of tags | `string` | n/a | yes |
+| <a name="input_region"></a> [region](#input\_region) | # Define a region of the cluster | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | # Define a list of tags for the resources | `map(any)` | n/a | yes |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_aws_cluster_account"></a> [aws\_cluster\_account](#output\_aws\_cluster\_account) | AWS Account of the cluster. |
+| <a name="output_aws_cluster_region"></a> [aws\_cluster\_region](#output\_aws\_cluster\_region) | AWS Region of the cluster. |
+| <a name="output_eks_cluster_endpoint"></a> [eks\_cluster\_endpoint](#output\_eks\_cluster\_endpoint) | Endpoint for your Kubernetes API server. |
+| <a name="output_eks_cluster_name"></a> [eks\_cluster\_name](#output\_eks\_cluster\_name) | Name of the cluster. |
+| <a name="output_eks_cluster_version"></a> [eks\_cluster\_version](#output\_eks\_cluster\_version) | # Define a version of the EKS cluster. |
