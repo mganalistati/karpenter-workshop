@@ -58,15 +58,13 @@ Certifique-se de ter as ferramentas abaixo instaladas:
 
 1. Crie um diretório karpenter-workshop:
    
-   &nbsp;
    ```bash
    mkdir karpenter-workshop
    cd karpenter-workshop
    ```
 
 2. Configure suas credenciais AWS (se aplicável):
-
-   &nbsp; 
+ 
    ```bash 
    export AWS_ACCESS_KEY_ID=your-key 
    export AWS_SECRET_ACCESS_KEY=your-secret
@@ -77,10 +75,8 @@ Certifique-se de ter as ferramentas abaixo instaladas:
    &nbsp;
    Para utilizar este repositório como domódulo Terraform, crie os seguintes arquivos no seu projeto e ajuste as configurações para seu cenário:
 
-   &nbsp;
 - **`terrafile.tf`**
 
-   &nbsp;
    ```bash
    module "karpenter-workshop" {
      source = "git@github.com:mganalistati/karpenter-workshop.git?ref=main"
@@ -93,7 +89,6 @@ Certifique-se de ter as ferramentas abaixo instaladas:
    ```
 - **`provider.tf`**
 
-   &nbsp;
    ```bash
    terraform {
      backend "s3" {
@@ -105,7 +100,6 @@ Certifique-se de ter as ferramentas abaixo instaladas:
    ```
 - **`locals.tf`**  
 
-   &nbsp;
    ```bash
    locals {
      common_tags = {
@@ -119,13 +113,11 @@ Certifique-se de ter as ferramentas abaixo instaladas:
    }
    ```
    
-   &nbsp;
 4. Inicialize o Terraform
 
    &nbsp;
    Execute os comandos abaixo para inicializar o Terraform e validar os arquivos:
 
-   &nbsp;
    ```bash
    terraform init -upgrade
    terraform plan -out tfplan
@@ -136,11 +128,11 @@ Certifique-se de ter as ferramentas abaixo instaladas:
    &nbsp;
    Após validar as configurações, execute:
 
-   &nbsp;
    ```bash
    terraform apply tfplan
    ```
 
+   &nbsp;
 Sua ```infraestrutura/plataforma``` será provisionada de acordo com as definições fornecidas, agora é só assistir a automação trabalhar por você! 🪄😎
 
 ## Regras de Contribuição
@@ -149,7 +141,6 @@ Sua ```infraestrutura/plataforma``` será provisionada de acordo com as definiç
 
 1. Clone o Repositório
    
-   &nbsp;
    ```bash
    git clone git@github.com:mganalistati/karpenter-workshop.git
    cd karpenter-workshop
@@ -157,24 +148,20 @@ Sua ```infraestrutura/plataforma``` será provisionada de acordo com as definiç
 
 2. Crie uma branch com um nome descritivo:
 
-   &nbsp;
    ```bash
    git checkout -b feature/minha-feature
    ```
 
 3. Faça suas alterações e escreva commits claros:
 
-   &nbsp;
    ```bash
    git commit -m "feat: adiciona suporte a nova funcionalidade"
    ```
 
 4. Execute o projeto local para validar as alterações.
    
-   &nbsp;
    Certifique-se de que as credenciais da AWS estão configuradas corretamente. Você pode fazer isso exportando as variáveis de ambiente:
 
-   &nbsp;
    ```bash
    export AWS_ACCESS_KEY_ID=your-access-key
    export AWS_SECRET_ACCESS_KEY=your-secret-key
@@ -182,14 +169,12 @@ Sua ```infraestrutura/plataforma``` será provisionada de acordo com as definiç
 
    Renomeie o arquivo de exemplo para terraform.tfvars, que será usado para passar os inputs necessários ao projeto:
 
-   &nbsp;
    ```bash
    mv terraform.tfvars.example terraform.tfvars
    ```
 
    O arquivo ```terraform.tfvars``` deve conter os seguintes inputs:
 
-   &nbsp;
    ```bash
    cidr_block    = "10.0.0.0/16"
    region        = "us-east-1"
@@ -204,7 +189,6 @@ Sua ```infraestrutura/plataforma``` será provisionada de acordo com as definiç
 
    Editar o Arquivo terrafile.tf para configurar o backend remoto no AWS S3.
 
-   &nbsp;
    ```bash
    terraform {
      backend "s3" {
@@ -217,14 +201,12 @@ Sua ```infraestrutura/plataforma``` será provisionada de acordo com as definiç
 
    Execute o comando abaixo para inicializar o Terraform, configurar o backend no S3 e baixar todos os submódulos:
 
-   &nbsp;
    ```bash
    terraform init
    ```
 
    Valide as alterações antes de aplicar:
 
-   &nbsp;
    ```bash
    terraform plan
    terraform apply
@@ -240,7 +222,6 @@ Além do uso do arquivo terraform.tfvars, o Terraform suporta outras formas de p
    &nbsp;
    Você pode definir variáveis de ambiente prefixadas com ```TF_VAR_``` para cada input. Por exemplo:
 
-   &nbsp;
    ```bash
    export TF_VAR_region="us-east-1"
    export TF_VAR_project_name="karpenter-workshop"
@@ -251,7 +232,6 @@ Além do uso do arquivo terraform.tfvars, o Terraform suporta outras formas de p
    &nbsp;
    Passe as variáveis diretamente ao rodar os comandos terraform plan ou terraform apply:
 
-   &nbsp;
    ```bash
    terraform apply -var "region=us-east-1" -var "project_name=karpenter-workshop"
    ```
@@ -260,12 +240,11 @@ Além do uso do arquivo terraform.tfvars, o Terraform suporta outras formas de p
    &nbsp;
    Use arquivos ```.tfvars``` adicionais com a flag ```-var-file```:
 
-   &nbsp;
    ```bash
    terraform apply -var-file="custom.tfvars"
    ```
 
-*Para mais informações, consulte a __[documentação oficial do Terraform sobre variáveis](https://developer.hashicorp.com/terraform/language/values/variables)__.*
+- *Para mais informações, consulte a __[documentação oficial do Terraform sobre variáveis](https://developer.hashicorp.com/terraform/language/values/variables)__.*
 
 ### Padrões de Commits
 
@@ -301,7 +280,6 @@ O arquivo ```.pre-commit-config.yaml``` já está configurado para realizar as s
    &nbsp;
    Certifique-se de que o ```pre-commit``` está instalado no seu ambiente. Você pode instalar via ```pip```:
 
-   &nbsp;
    ```bash
    pip install pre-commit
    ```
@@ -311,7 +289,6 @@ O arquivo ```.pre-commit-config.yaml``` já está configurado para realizar as s
    &nbsp;
    Execute o seguinte comando na raiz do repositório para instalar os hooks definidos no arquivo ```.pre-commit-config.yaml```:
 
-   &nbsp;
    ```bash
    pre-commit install
    ```
@@ -321,7 +298,6 @@ O arquivo ```.pre-commit-config.yaml``` já está configurado para realizar as s
    &nbsp;
    Antes de realizar um commit, você pode executar as validações manualmente em todos os arquivos:
 
-   &nbsp;
    ```bash
    pre-commit run --all-files
    ```
